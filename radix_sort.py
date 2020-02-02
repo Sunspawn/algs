@@ -8,6 +8,7 @@ def radix_sort(arr, base=10):
     :param arr: The array
     :param base: The base of the numbers in the array. Defaults to decimal.
     """
+    # get the highest exponent's order for sorting
     m_num = max(arr)
     n = floor(log(m_num, base))
 
