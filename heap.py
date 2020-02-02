@@ -1,6 +1,13 @@
 from general import swap
 
 
+def build_heap(arr):
+    """Builds a heap on a given array
+    :param arr: The array to turn into a heap
+    """
+    build_heap_top_down(arr)
+
+
 def sift_down(arr, i):
     """Sifts down starting from index i"""
     largest = i
@@ -56,8 +63,12 @@ def build_heap_top_down(arr):
 if __name__ == "__main__":
     # testing
     arr = [27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0]
-    arr2 = list(arr)
+    print("Bottom up:")
+    print("Before heap: {0}".format(arr))
     build_heap_bottom_up(arr)
-    build_heap_top_down(arr2)
-    print(arr)
-    print(arr2)
+    print("After heap: {0}".format(arr))
+    arr2 = [27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0]
+    print("Top-down:")
+    print("Before heap: {0}".format(arr2))
+    build_heap_bottom_up(arr)
+    print("After heap: {0}".format(arr2))
