@@ -1,4 +1,9 @@
-def counting_sort(arr, exp = 1, base  = 10):
+def counting_sort_by_ith_digit(arr, exp = 1, base  = 10):
+    """Sorting using the counting sort idea, but according to the ith digit, using the given exponent of the digit.
+    :param arr: The array
+    :param exp: The exponent of the digit in question
+    :param base: The base of the numbers in the array. Defaults to decimals.
+    """
     n = len(arr)
 
     # The array to be used for the sorted one.
@@ -33,5 +38,5 @@ def counting_sort(arr, exp = 1, base  = 10):
 if __name__ == "__main__":
     arr = [45643, 1568, 9234, 6743, 8786, 4757]
     print("Before:", arr)
-    counting_sort(arr, 1)
+    counting_sort_by_ith_digit(arr, 1)
     print("After:", arr)
