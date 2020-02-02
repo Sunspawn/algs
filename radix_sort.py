@@ -1,16 +1,19 @@
-from counting_sort import counting_sort
+from counting_sort import counting_sort_by_ith_digit
 from math import log
 from math import floor
 
 
 def radix_sort(arr, base=10):
-    """Sorts a mutable array of integers in a given base, defaulting to decimals."""
+    """Sorts a mutable array of integers in a given base.
+    :param arr: The array
+    :param base: The base of the numbers in the array. Defaults to decimal.
+    """
     m_num = max(arr)
     n = floor(log(m_num, base))
 
     # use stable sort according to every digit from LSD to MSD
     for i in range(0, n+1):
-        counting_sort(arr, base ** i, base)
+        counting_sort_by_ith_digit(arr, base ** i, base)
 
 
 if __name__ == "__main__":
